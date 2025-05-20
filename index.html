@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kingclems Autos - Premium Car Dealership</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Kingclems Autos</div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#cars">Cars</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">☰</div>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Drive Your Dream Car Today</h1>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search by make, model, or location...">
+                <button onclick="filterCars()">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" id="cars">
+        <h2 class="section-title">Our Top Picks</h2>
+        <div class="filter-bar">
+            <select id="makeFilter">
+                <option value="all">All Makes</option>
+                <option value="Toyota">Toyota</option>
+                <option value="Mercedes-Benz">Mercedes-Benz</option>
+                <option value="Lexus">Lexus</option>
+                <option value="BMW">BMW</option>
+                <option value="Honda">Honda</option>
+                <option value="Audi">Audi</option>
+            </select>
+            <select id="priceFilter">
+                <option value="all">All Prices</option>
+                <option value="0-30000">Under $30,000</option>
+                <option value="30000-50000">$30,000 - $50,000</option>
+                <option value="50000+">Over $50,000</option>
+            </select>
+            <select id="locationFilter">
+                <option value="all">All Locations</option>
+                <option value="Lagos">Lagos</option>
+                <option value="Abuja">Abuja</option>
+            </select>
+        </div>
+        <div class="car-grid" id="carGrid">
+            <!-- Car cards will be dynamically populated by JavaScript -->
+        </div>
+        <div class="cta">
+            <a href="#cars">Browse All Cars</a>
+        </div>
+    </section>
+
+    <section class="container" id="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <h3>Car Financing</h3>
+                <p>Flexible car loans with low interest rates to get you on the road.</p>
+                <a href="#contact" class="service-cta">Apply Now</a>
+            </div>
+            <div class="service-card">
+                <h3>Certified Pre-Owned</h3>
+                <p>Inspected and certified vehicles with extended warranties.</p>
+                <a href="#cars" class="service-cta">Explore Cars</a>
+            </div>
+            <div class="service-card">
+                <h3>Maintenance Plans</h3>
+                <p>Comprehensive service packages for worry-free ownership.</p>
+                <a href="#contact" class="service-cta">Learn More</a>
+            </div>
+            <div class="service-card">
+                <h3>Trade-In Program</h3>
+                <p>Upgrade your vehicle with our hassle-free trade-in process.</p>
+                <a href="#contact" class="service-cta">Get a Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" id="contact">
+        <h2 class="section-title">Get in Touch</h2>
+        <p style="text-align: center;">Contact us for inquiries, financing, or to schedule a test drive.</p>
+        <div class="cta">
+            <a href="mailto:info@kingclemsautos.com">Email Us</a>
+        </div>
+    </section>
+
+    <div class="modal" id="carModal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <div class="modal-carousel">
+                <div class="carousel-images" id="modalCarousel"></div>
+                <button class="carousel-prev">❮</button>
+                <button class="carousel-next">❯</button>
+            </div>
+            <h2 id="modalTitle"></h2>
+            <div id="modalRating" class="rating"></div>
+            <ul id="modalSpecs"></ul>
+            <div class="modal-buttons">
+                <a id="contactSeller" href="#contact" class="cta">Contact Seller</a>
+                <a id="applyLoan" href="#contact" class="cta">Apply for Loan</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        © 2025 Kingclems Autos. All rights reserved.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
