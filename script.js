@@ -1,22 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Navigation toggle for mobile
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-
-    menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-
-    // Navigation link highlighting
-    const links = document.querySelectorAll('.nav-links a');
-    links.forEach(link => {
-        link.addEventListener('click', () => {
-            links.forEach(l => l.classList.remove('active'));
-            link.classList.add('active');
-        });
-    });
-
-    // Car data with detailed specs
+    // Car data with detailed specs and features
     const cars = [
         {
             id: 1,
@@ -49,6 +32,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Price: $22,000',
                 'Monthly Payment: $2,200',
                 'Rating: 4.5/5'
+            ],
+            features: [
+                'Adaptive Cruise Control',
+                'Lane Departure Warning',
+                'Bluetooth Connectivity',
+                'Keyless Entry',
+                'LED Headlights'
             ]
         },
         {
@@ -81,6 +71,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Price: $35,000',
                 'Monthly Payment: $3,500',
                 'Rating: 4.8/5'
+            ],
+            features: [
+                'Panoramic Sunroof',
+                'Premium Audio System',
+                'Heated Seats',
+                'Blind Spot Monitoring',
+                'Smartphone Integration'
             ]
         },
         {
@@ -113,6 +110,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Price: $40,000',
                 'Monthly Payment: $4,000',
                 'Rating: 4.7/5'
+            ],
+            features: [
+                'Mark Levinson Audio',
+                'Power Liftgate',
+                'Lane Keep Assist',
+                'Heated Steering Wheel',
+                'Parking Sensors'
             ]
         },
         {
@@ -144,6 +148,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Price: $50,000',
                 'Monthly Payment: $5,000',
                 'Rating: 4.9/5'
+            ],
+            features: [
+                'Head-Up Display',
+                'Adaptive Suspension',
+                '360-Degree Camera',
+                'Wireless Charging',
+                'Gesture Control'
             ]
         },
         {
@@ -180,6 +191,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Price: $20,000',
                 'Monthly Payment: $2,000',
                 'Rating: 4.3/5'
+            ],
+            features: [
+                'Apple CarPlay',
+                'Adaptive Cruise Control',
+                'Lane Departure Warning',
+                'Keyless Entry',
+                'LED Headlights'
             ]
         },
         {
@@ -212,6 +230,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Price: $42,000',
                 'Monthly Payment: $4,200',
                 'Rating: 4.6/5'
+            ],
+            features: [
+                'Bang & Olufsen Audio',
+                'Virtual Cockpit',
+                'Heated Seats',
+                'Parking Assist',
+                'Keyless Entry'
             ]
         },
         {
@@ -245,6 +270,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Price: $18,000',
                 'Monthly Payment: $1,800',
                 'Rating: 4.4/5'
+            ],
+            features: [
+                'Adaptive Cruise Control',
+                'Lane Keep Assist',
+                'Bluetooth Connectivity',
+                'Rearview Camera',
+                'LED Headlights'
             ]
         },
         {
@@ -277,6 +309,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Price: $38,000',
                 'Monthly Payment: $3,800',
                 'Rating: 4.7/5'
+            ],
+            features: [
+                'Burmester Audio',
+                'Ambient Lighting',
+                'Heated Seats',
+                'Blind Spot Monitoring',
+                'Smartphone Integration'
             ]
         },
         {
@@ -309,6 +348,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Price: $39,000',
                 'Monthly Payment: $3,900',
                 'Rating: 4.6/5'
+            ],
+            features: [
+                'Mark Levinson Audio',
+                'Power Liftgate',
+                'Lane Keep Assist',
+                'Heated Steering Wheel',
+                'Parking Sensors'
             ]
         },
         {
@@ -340,6 +386,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Price: $45,000',
                 'Monthly Payment: $4,500',
                 'Rating: 4.8/5'
+            ],
+            features: [
+                'Head-Up Display',
+                'Adaptive Suspension',
+                '360-Degree Camera',
+                'Wireless Charging',
+                'Gesture Control'
             ]
         },
         {
@@ -359,7 +412,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 'https://media.istockphoto.com/id/1313863869/photo/close-up-engine-of-new-honda-crv-in-bangkok-thailand.jpg?s=2048x2048&w=is&k=20&c=Igpp8g-9NjUJrA7dv8mTPCDxn9Rd93YzHFD_WDVMMC0=',
                 'https://media.istockphoto.com/id/519557186/photo/details-of-a-new-car-engine.jpg?s=2048x2048&w=is&k=20&c=yELJpKTJFlbg6GcjbS83Vc1P4Bn6IPEWbh0T9faH-LA=',
                 'https://media.istockphoto.com/id/536813787/photo/honda-cr-v-suv-off-road-vehicle.jpg?s=2048x2048&w=is&k=20&c=h65OeJUaCe6Ls9vo5xr2zfYlo_R05Cvz2HswbHmgILQ='
-            ],
+                ],
             specs: [
                 'Drive: AWD',
                 'Features: Backup Camera, Apple CarPlay',
@@ -372,6 +425,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Price: $28,000',
                 'Monthly Payment: $2,800',
                 'Rating: 4.5/5'
+            ],
+            features: [
+                'Adaptive Cruise Control',
+                'Lane Keep Assist',
+                'Bluetooth Connectivity',
+                'Power Liftgate',
+                'LED Headlights'
             ]
         },
         {
@@ -404,146 +464,252 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Price: $36,000',
                 'Monthly Payment: $3,600',
                 'Rating: 4.7/5'
+            ],
+            features: [
+                'Virtual Cockpit',
+                'Heated Seats',
+                'Parking Assist',
+                'Keyless Entry',
+                'Premium Audio'
             ]
         }
     ];
 
-    // Populate car grid
-    const carGrid = document.getElementById('carGrid');
-    function renderCars(filteredCars) {
-        carGrid.innerHTML = '';
-        filteredCars.forEach(car => {
-            const carCard = document.createElement('div');
-            carCard.className = 'car-card';
-            carCard.setAttribute('data-id', car.id);
-            carCard.innerHTML = `
-                <div class="car-carousel">
-                    <div class="carousel-images" id="carousel-${car.id}">
-                        ${car.images.map(img => `<img src="${img}" alt="${car.title}" />`).join('')}
-                    </div>
-                    <button class="carousel-prev" onclick="moveCarousel(${car.id}, -1)">❮</button>
-                    <button class="carousel-next" onclick="moveCarousel(${car.id}, 1)">❯</button>
-                </div>
-                <div class="car-card-content">
-                    <h3>${car.title}</h3>
-                    <p>${car.specs[0]}</p>
-                    <p>Location: ${car.location} (${car.city})</p>
-                    <p>Mileage: ${car.miles.toLocaleString()} miles</p>
-                    <p>Cylinder: ${car.cylinder}</p>
-                    <p class="price">$${car.price.toLocaleString()} ($${car.monthlyPayment.toLocaleString()}/mo)</p>
-                    <div class="rating">${'★'.repeat(Math.floor(car.rating))}${'☆'.repeat(5 - Math.floor(car.rating))}</div>
-                    <button class="contact-seller">Contact Seller</button>
-                    <button class="apply-loan">Apply for Loan</button>
-                </div>
-            `;
-            carGrid.appendChild(carCard);
+    // Check if on index.html or car-details.html
+    if (document.getElementById('carGrid')) {
+        // Index page logic
+        // Navigation toggle for mobile
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
 
-            // Add event listeners for buttons
-            carCard.querySelector('.contact-seller').addEventListener('click', () => {
-                window.location.href = `mailto:info@kingclemsautos.com?subject=Inquiry about ${car.title}`;
-            });
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
 
-            carCard.querySelector('.apply-loan').addEventListener('click', () => {
-                window.location.href = `#contact?car=${car.title}&loan=true`;
+        // Navigation link highlighting
+        const links = document.querySelectorAll('.nav-links a');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                links.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
             });
         });
-    }
 
-    // Initial render
-    renderCars(cars);
+        // Populate car grid
+        const carGrid = document.getElementById('carGrid');
+        function renderCars(filteredCars) {
+            carGrid.innerHTML = '';
+            filteredCars.forEach(car => {
+                const carCard = document.createElement('div');
+                carCard.className = 'car-card';
+                carCard.setAttribute('data-id', car.id);
+                carCard.innerHTML = `
+                    <div class="car-carousel">
+                        <div class="carousel-images" id="carousel-${car.id}">
+                            ${car.images.map(img => `<img src="${img}" alt="${car.title}" />`).join('')}
+                        </div>
+                        <button class="carousel-prev" onclick="moveCarousel(${car.id}, -1)">❮</button>
+                        <button class="carousel-next" onclick="moveCarousel(${car.id}, 1)">❯</button>
+                    </div>
+                    <div class="car-card-content">
+                        <h3>${car.title}</h3>
+                        <p>${car.specs[0]}</p>
+                        <p>Location: ${car.location} (${car.city})</p>
+                        <p>Mileage: ${car.miles.toLocaleString()} miles</p>
+                        <p>Cylinder: ${car.cylinder}</p>
+                        <p class="price">$${car.price.toLocaleString()} ($${car.monthlyPayment.toLocaleString()}/mo)</p>
+                        <div class="rating">${'★'.repeat(Math.floor(car.rating))}${'☆'.repeat(5 - Math.floor(car.rating))}</div>
+                        <button class="contact-seller">Contact Seller</button>
+                        <button class="apply-loan">Apply for Loan</button>
+                    </div>
+                `;
+                carGrid.appendChild(carCard);
 
-    // Carousel functionality
-    window.moveCarousel = function(carId, direction) {
-        const carousel = document.getElementById(`carousel-${carId}`);
-        const images = carousel.querySelectorAll('img');
-        let currentIndex = parseInt(carousel.dataset.index || 0);
-        currentIndex = (currentIndex + direction + images.length) % images.length;
-        carousel.dataset.index = currentIndex;
-        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-    };
+                // Add event listeners for buttons
+                carCard.querySelector('.contact-seller').addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    window.location.href = `mailto:info@kingclemsautos.com?subject=Inquiry about ${car.title}`;
+                });
 
-    // Modal functionality
-    const modal = document.getElementById('carModal');
-    const modalCarousel = document.getElementById('modalCarousel');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalSpecs = document.getElementById('modalSpecs');
-    const modalRating = document.getElementById('modalRating');
-    const contactSeller = document.getElementById('contactSeller');
-    const applyLoan = document.getElementById('applyLoan');
-    const closeModal = document.querySelector('.close');
-    const modalPrev = document.querySelector('.modal-carousel .carousel-prev');
-    const modalNext = document.querySelector('.modal-carousel .carousel-next');
+                carCard.querySelector('.apply-loan').addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    window.location.href = `index.html#contact?car=${car.title}&loan=true`;
+                });
 
-    carGrid.addEventListener('click', (e) => {
-        if (e.target.classList.contains('contact-seller') || e.target.classList.contains('apply-loan')) return;
-        const carCard = e.target.closest('.car-card');
-        if (!carCard) return;
-        const carId = parseInt(carCard.getAttribute('data-id'));
+                // Navigate to car details page
+                carCard.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('contact-seller') || e.target.classList.contains('apply-loan') || 
+                        e.target.classList.contains('carousel-prev') || e.target.classList.contains('carousel-next')) return;
+                    window.location.href = `car-details.html?id=${car.id}`;
+                });
+            });
+        }
+
+        // Initial render
+        renderCars(cars);
+
+        // Carousel functionality
+        window.moveCarousel = function(carId, direction) {
+            const carousel = document.getElementById(`carousel-${carId}`);
+            const images = carousel.querySelectorAll('img');
+            let currentIndex = parseInt(carousel.dataset.index || 0);
+            currentIndex = (currentIndex + direction + images.length) % images.length;
+            carousel.dataset.index = currentIndex;
+            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        };
+
+        // Filter functionality
+        window.filterCars = function() {
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+            const makeFilter = document.getElementById('makeFilter').value;
+            const priceFilter = document.getElementById('priceFilter').value;
+            const locationFilter = document.getElementById('locationFilter').value;
+
+            const filteredCars = cars.filter(car => {
+                const matchesSearch = car.title.toLowerCase().includes(searchInput) || car.city.toLowerCase().includes(searchInput);
+                const matchesMake = makeFilter === 'all' || car.make === makeFilter;
+                const matchesLocation = locationFilter === 'all' || car.city === locationFilter;
+                let matchesPrice = true;
+                if (priceFilter !== 'all') {
+                    if (priceFilter === '0-30000') matchesPrice = car.price <= 30000;
+                    else if (priceFilter === '30000-50000') matchesPrice = car.price > 30000 && car.price <= 50000;
+                    else if (priceFilter === '50000+') matchesPrice = car.price > 50000;
+                }
+                return matchesSearch && matchesMake && matchesPrice && matchesLocation;
+            });
+
+            renderCars(filteredCars);
+        };
+
+        // Trigger filter on select change
+        document.getElementById('makeFilter').addEventListener('change', filterCars);
+        document.getElementById('priceFilter').addEventListener('change', filterCars);
+        document.getElementById('locationFilter').addEventListener('change', filterCars);
+    } else if (document.getElementById('carTitle')) {
+        // Car details page logic
+        // Navigation toggle for mobile
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Get car ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const carId = parseInt(urlParams.get('id'));
         const car = cars.find(c => c.id === carId);
 
-        modalCarousel.innerHTML = car.images.map(img => `<img src="${img}" alt="${car.title}" />`).join('');
-        modalCarousel.dataset.index = 0;
-        modalCarousel.style.transform = 'translateX(0)';
-        modalTitle.textContent = car.title;
-        modalSpecs.innerHTML = car.specs.map(spec => `<li>${spec}</li>`).join('');
-        modalRating.innerHTML = '★'.repeat(Math.floor(car.rating)) + '☆'.repeat(5 - Math.floor(car.rating));
-        contactSeller.href = `mailto:info@kingclemsautos.com?subject=Inquiry about ${car.title}`;
-        applyLoan.href = `#contact?car=${car.title}&loan=true`;
+        if (car) {
+            // Populate car details
+            document.getElementById('carTitle').textContent = car.title;
+            document.getElementById('carRating').innerHTML = '★'.repeat(Math.floor(car.rating)) + '☆'.repeat(5 - Math.floor(car.rating));
+            document.getElementById('carSpecs').innerHTML = car.specs.map(spec => `<li>${spec}</li>`).join('');
+            document.getElementById('carFeatures').innerHTML = car.features.map(feature => `<li>${feature}</li>`).join('');
+            document.getElementById('carCarousel').innerHTML = car.images.map(img => `<img src="${img}" alt="${car.title}" />`).join('');
+            document.getElementById('contactSeller').href = `mailto:info@kingclemsautos.com?subject=Inquiry about ${car.title}`;
+            document.getElementById('applyLoan').href = `index.html#contact?car=${car.title}&loan=true`;
+            document.getElementById('carValue').value = car.price;
 
-        modal.style.display = 'block';
-    });
+            // Populate related cars
+            const relatedCars = cars.filter(c => c.id !== carId && (c.make === car.make || Math.abs(c.price - car.price) <= 10000)).slice(0, 3);
+            const relatedCarsGrid = document.getElementById('relatedCars');
+            relatedCars.forEach(relatedCar => {
+                const carCard = document.createElement('div');
+                carCard.className = 'car-card';
+                carCard.setAttribute('data-id', relatedCar.id);
+                carCard.innerHTML = `
+                    <div class="car-carousel">
+                        <div class="carousel-images" id="carousel-${relatedCar.id}">
+                            ${relatedCar.images.map(img => `<img src="${img}" alt="${relatedCar.title}" />`).join('')}
+                        </div>
+                        <button class="carousel-prev" onclick="moveCarousel(${relatedCar.id}, -1)">❮</button>
+                        <button class="carousel-next" onclick="moveCarousel(${relatedCar.id}, 1)">❯</button>
+                    </div>
+                    <div class="car-card-content">
+                        <h3>${relatedCar.title}</h3>
+                        <p>${relatedCar.specs[0]}</p>
+                        <p>Location: ${relatedCar.location} (${relatedCar.city})</p>
+                        <p>Mileage: ${relatedCar.miles.toLocaleString()} miles</p>
+                        <p>Cylinder: ${relatedCar.cylinder}</p>
+                        <p class="price">$${relatedCar.price.toLocaleString()} ($${relatedCar.monthlyPayment.toLocaleString()}/mo)</p>
+                        <div class="rating">${'★'.repeat(Math.floor(relatedCar.rating))}${'☆'.repeat(5 - Math.floor(relatedCar.rating))}</div>
+                        <button class="contact-seller">Contact Seller</button>
+                        <button class="apply-loan">Apply for Loan</button>
+                    </div>
+                `;
+                relatedCarsGrid.appendChild(carCard);
 
-    closeModal.addEventListener('click', () => {
-        modal.style.display = 'none';
-    });
+                carCard.querySelector('.contact-seller').addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    window.location.href = `mailto:info@kingclemsautos.com?subject=Inquiry about ${relatedCar.title}`;
+                });
 
-    window.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.style.display = 'none';
+                carCard.querySelector('.apply-loan').addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    window.location.href = `index.html#contact?car=${relatedCar.title}&loan=true`;
+                });
+
+                carCard.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('contact-seller') || e.target.classList.contains('apply-loan') || 
+                        e.target.classList.contains('carousel-prev') || e.target.classList.contains('carousel-next')) return;
+                    window.location.href = `car-details.html?id=${relatedCar.id}`;
+                });
+            });
+
+            // Carousel functionality
+            window.moveCarousel = function(direction) {
+                const carousel = document.getElementById('carCarousel');
+                const images = carousel.querySelectorAll('img');
+                let currentIndex = parseInt(carousel.dataset.index || 0);
+                currentIndex = (currentIndex + direction + images.length) % images.length;
+                carousel.dataset.index = currentIndex;
+                carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+            };
+
+            // Loan calculator
+         window.calculateLoan =  function () {
+    const carValue = parseFloat(document.getElementById('carValue').value) || 0;
+    const loanTerm = parseInt(document.getElementById('loanTerm').value) || 36;
+    let upfrontPayment = parseFloat(document.getElementById('upfrontPayment').value) || 0;
+
+    // Validate upfront payment (40% min, 70% max of car value)
+    const minUpfront = carValue * 0.4;
+    const maxUpfront = carValue * 0.7;
+    if (upfrontPayment < minUpfront) upfrontPayment = minUpfront;
+    if (upfrontPayment > maxUpfront) upfrontPayment = maxUpfront;
+    document.getElementById('upfrontPayment').value = upfrontPayment;
+
+    const loanAmount = carValue - upfrontPayment;
+    const interestRate = 0.05 / 12; // 5% annual interest, monthly rate
+    const monthlyPayment = loanAmount * (interestRate * Math.pow(1 + interestRate, loanTerm)) / (Math.pow(1 + interestRate, loanTerm) - 1);
+
+    // Additional fixed costs (example values based on image)
+    const additionalCosts = 50000; // Approx. ₦50,000/month for registration, insurance, etc.
+    const totalMonthlyPayment = monthlyPayment + additionalCosts;
+
+    document.getElementById('monthlyPayment').textContent = totalMonthlyPayment.toLocaleString('en-NG', { style: 'currency', currency: 'NGN' }).replace('NGN', '₦');
+    document.getElementById('resultCarPrice').textContent = carValue.toLocaleString('en-NG', { style: 'currency', currency: 'NGN' }).replace('NGN', '₦');
+    document.getElementById('resultDownPayment').textContent = upfrontPayment.toLocaleString('en-NG', { style: 'currency', currency: 'NGN' }).replace('NGN', '₦');
+    document.getElementById('resultLoanTenure').textContent = `${loanTerm} months`;
+}
+
+// Initialize calculator with car value from page context
+document.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const carId = parseInt(urlParams.get('id'));
+    const car = cars.find(c => c.id === carId);
+    if (car) {
+        document.getElementById('carValue').value = car.price;
+        calculateLoan(); // Initial calculation
+    }
+
+    // Update calculation on input change
+    document.getElementById('loanTerm').addEventListener('change', calculateLoan);
+    document.getElementById('upfrontPayment').addEventListener('input', calculateLoan);
+});
+        } else {
+            document.getElementById('carTitle').textContent = 'Car Not Found';
         }
-    });
-
-    modalPrev.addEventListener('click', () => {
-        const currentIndex = parseInt(modalCarousel.dataset.index || 0);
-        const images = modalCarousel.querySelectorAll('img');
-        const newIndex = (currentIndex - 1 + images.length) % images.length;
-        modalCarousel.dataset.index = newIndex;
-        modalCarousel.style.transform = `translateX(-${newIndex * 100}%)`;
-    });
-
-    modalNext.addEventListener('click', () => {
-        const currentIndex = parseInt(modalCarousel.dataset.index || 0);
-        const images = modalCarousel.querySelectorAll('img');
-        const newIndex = (currentIndex + 1) % images.length;
-        modalCarousel.dataset.index = newIndex;
-        modalCarousel.style.transform = `translateX(-${newIndex * 100}%)`;
-    });
-
-    // Filter functionality
-    window.filterCars = function() {
-        const searchInput = document.getElementById('searchInput').value.toLowerCase();
-        const makeFilter = document.getElementById('makeFilter').value;
-        const priceFilter = document.getElementById('priceFilter').value;
-        const locationFilter = document.getElementById('locationFilter').value;
-
-        const filteredCars = cars.filter(car => {
-            const matchesSearch = car.title.toLowerCase().includes(searchInput) || car.city.toLowerCase().includes(searchInput);
-            const matchesMake = makeFilter === 'all' || car.make === makeFilter;
-            const matchesLocation = locationFilter === 'all' || car.city === locationFilter;
-            let matchesPrice = true;
-            if (priceFilter !== 'all') {
-                if (priceFilter === '0-30000') matchesPrice = car.price <= 30000;
-                else if (priceFilter === '30000-50000') matchesPrice = car.price > 30000 && car.price <= 50000;
-                else if (priceFilter === '50000+') matchesPrice = car.price > 50000;
-            }
-            return matchesSearch && matchesMake && matchesPrice && matchesLocation;
-        });
-
-        renderCars(filteredCars);
-    };
-
-    // Trigger filter on select change
-    document.getElementById('makeFilter').addEventListener('change', filterCars);
-    document.getElementById('priceFilter').addEventListener('change', filterCars);
-    document.getElementById('locationFilter').addEventListener('change', filterCars);
+    }
 });

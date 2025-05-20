@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Details - Kingclems Autos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Kingclems Autos</div>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#cars">Cars</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">☰</div>
+        </nav>
+    </header>
+
+    <section class="container car-details">
+        <h2 class="section-title" id="carTitle"></h2>
+        <div class="car-details-content">
+            <div class="car-carousel">
+                <div class="carousel-images" id="carCarousel"></div>
+                <button class="carousel-prev" onclick="moveCarousel(-1)">❮</button>
+                <button class="carousel-next" onclick="moveCarousel(1)">❯</button>
+            </div>
+            <div class="car-info">
+                <div class="rating" id="carRating"></div>
+                <ul id="carSpecs"></ul>
+                <h3>Key Features</h3>
+                <ul id="carFeatures"></ul>
+                <div class="car-buttons">
+                    <a id="contactSeller" href="#" class="cta">Contact Seller</a>
+                    <a id="applyLoan" href="#" class="cta">Apply for Loan</a>
+                </div>
+            </div>
+        </div>
+        <div class="loan-calculator">
+            <h3>Loan Calculator</h3>
+            <div class="calculator-content">
+                <div class="loan-preference">
+                    <h4>Loan Preference</h4>
+                    <label>Car Value: <input type="number" id="carValue" readonly></label>
+                    <label>Loan Term (Optional):
+                        <select id="loanTerm">
+                            <option value="6">6 months</option>
+                            <option value="12">12 months</option>
+                            <option value="24">24 months</option>
+                            <option value="36" selected>36 months</option>
+                            <option value="48">48 months</option>
+                        </select>
+                    </label>
+                    <label>Upfront Payment: <input type="number" id="upfrontPayment" min="0"></label>
+                    <p>Min 40% of car value | Max 70% of car value</p>
+                    <button onclick="calculateLoan()" class="calculate-btn">Calculate</button>
+                </div>
+                <div class="calculator-result">
+                    <h4>Estimated Monthly Payment</h4>
+                    <p>₦<span id="monthlyPayment">0</span></p>
+                    <div class="result-details">
+                        <p>Car Price: ₦<span id="resultCarPrice">0</span></p>
+                        <p>Down-payment: ₦<span id="resultDownPayment">0</span></p>
+                        <p>Loan Tenure: <span id="resultLoanTenure">0 months</span></p>
+                        <p>Monthly Installment Includes:</p>
+                        <ul>
+                            <li>Vehicle Registration</li>
+                            <li>Comprehensive Insurance</li>
+                            <li>Annual Maintenance Cost</li>
+                            <li>Tracker</li>
+                            <li>Credit Life Insurance</li>
+                            <li>Roadworthiness</li>
+                            <li>Vehicle Licence Renewal</li>
+                        </ul>
+                        <p>Benefits worth: ₦83,274/month</p>
+                    </div>
+                    <button class="apply-btn">Apply For Loan</button>
+                    <p style="font-size: 0.8rem;">Interest rate available on request</p>
+                </div>
+            </div>
+        </div>
+        <div class="related-cars">
+            <h3>Other Cars You Might Like</h3>
+            <div class="car-grid" id="relatedCars"></div>
+        </div>
+    </section>
+
+    <footer>
+        © 2025 Kingclems Autos. All rights reserved.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
